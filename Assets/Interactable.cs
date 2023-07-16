@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    //public bool clone = false;
     private bool triggered = false;
 
     public virtual void Interact ()

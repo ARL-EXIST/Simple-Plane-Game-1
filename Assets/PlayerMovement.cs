@@ -99,6 +99,20 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey("s")){
             rb.AddForce(0, -xAndYMovement, 0, ForceMode.VelocityChange);
         }
+
+        if(Input.GetKey("q")){
+            /*m_EulerAngleVelocity = new Vector3(0, 0, 0);
+            Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.fixedDeltaTime);
+            rb.MoveRotation(m_Rigidbody.rotation * deltaRotation);*/
+            transform.Rotate(0, 0, 1);
+        }
+
+        if(Input.GetKey("e")){
+            /*m_EulerAngleVelocity = new Vector3(0, 0, 0);
+            Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.fixedDeltaTime);
+            rb.MoveRotation(m_Rigidbody.rotation * deltaRotation);*/
+            transform.Rotate(0, 0, -1);
+        }
     }
 
     private void ScreenBounding()

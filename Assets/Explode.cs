@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Explode : Interactable
 {
-    [SerializeField] private Transform BrokenRock;
+    public GameObject BrokenRock;
 
     public PlayerMovement pM;
 
@@ -20,8 +20,8 @@ public class Explode : Interactable
         FindObjectOfType<GameManager>().Damaged();
         
         Destroy(gameObject);
-        Transform BrokenTransform = Instantiate(BrokenRock, transform.position, Random.rotation);
-        foreach(Transform child in BrokenTransform){
+        GameObject BrokenTransform = Instantiate(BrokenRock, transform.position, Random.rotation);
+        foreach(Transform child in BrokenTransform.transform){
             if(child.TryGetComponent<Rigidbody>(out Rigidbody childRigidBody)){
                 childRigidBody.constraints = RigidbodyConstraints.None;
                 childRigidBody.AddExplosionForce(300f, transform.position, 5f);

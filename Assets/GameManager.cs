@@ -118,13 +118,9 @@ public class GameManager : MonoBehaviour
             Debug.Log("Game Over");
             if(restartDelay > 1){
                 Invoke("FailLevel", restartDelay/4);
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
             }
-                Invoke("Restart", restartDelay + 1);
         }
-    }
-
-    private void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

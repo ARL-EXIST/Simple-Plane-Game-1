@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 velocity;
 
     [Header("Movement")]
-    private Rigidbody rb;
+    public Rigidbody rb;
     //speed increase and force increase effect the increase in speed over time,
     //2 variables so I can vary the increase in acceleration
     public float speedIncrease = 0.01f;

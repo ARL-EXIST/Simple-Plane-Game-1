@@ -5,8 +5,14 @@ using UnityEngine;
 public class CameraSpin : MonoBehaviour
 {
     public GameObject target;
- 
-    void Update(){
+    
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    void FixedUpdate(){
     transform.LookAt(target.transform);
     transform.Translate(Vector3.right * Time.deltaTime);
     }

@@ -6,7 +6,7 @@ public class Unrender : MonoBehaviour
 {
     private float distanceFromPlayer;
 
-    private void Update(){
+    private void FixedUpdate(){
         //if(clone){
         distanceFromPlayer = transform.position.z - GameObject.Find("Main Camera").GetComponent<Transform>().transform.position.z;
             if(distanceFromPlayer < 0){

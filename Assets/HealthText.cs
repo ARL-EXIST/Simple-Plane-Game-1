@@ -14,7 +14,7 @@ public class HealthText : MonoBehaviour
         gM = FindObjectOfType<GameManager>();
     }
     
-    private void Update()
+    private void FixedUpdate()
     {
         healthText.text = "lives: " + (gM.playerHealth).ToString("0");
     }

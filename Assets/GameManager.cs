@@ -60,11 +60,11 @@ public class GameManager : MonoBehaviour
         else if(view.transform.position.z > 0 && view.transform.position.z > distanceSpawn - farClip){
             //Debug.Log("spawn");
             SpawnNextRocks();
-            pM._xDrag += 0.0001f;
-            pM._yDrag += 0.0001f;
+            MyInput();
         }
         else{
             //Debug.Log(view.transform.position.z);
+            MyInput();
         }
         screenSize();
     }
@@ -121,6 +121,13 @@ public class GameManager : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
             }
+        }
+    }
+
+    public void MyInput()
+    {
+        if(Input.GetKey(KeyCode.Escape)){
+            SceneManager.LoadScene("Main Menu");
         }
     }
 }

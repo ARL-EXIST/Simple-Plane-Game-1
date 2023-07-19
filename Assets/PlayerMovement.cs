@@ -22,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public float speedIncrease = 0.01f;
     private float forceIncrease;
     public float xAndYMovement = 0.08f;
-    public float _xDrag, _yDrag, _zDrag = 0;        //Drag dependent on direction
+    public float zRotation = 1f;
+    public float _xDrag, _yDrag, _zDrag, xAndYDragIncrease = 0;        //Drag dependent on direction
     private bool xDragOn, yDragOn, zDragOn = false;
     public bool getInput;
 
@@ -39,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         _xDrag = 1 + (_xDrag / 1000);
         _yDrag = 1 + (_yDrag / 1000);
         _zDrag = 1 + (_zDrag / 1000);
+        xAndYDragIncrease = xAndYDragIncrease/100000;
 
         forceIncrease = speedIncrease/50;
         //initial movement speed
@@ -46,8 +48,8 @@ public class PlayerMovement : MonoBehaviour
         getInput = true;
     }
 
-    // Update is called once per frame
-    private void Update()
+    // FixedUpdate is called once per frame
+    private void FixedUpdate()
     {
         velocity = rb.velocity;         //reference to rigidbody's velocity, as you cannot directly convert
 
@@ -62,6 +64,9 @@ public class PlayerMovement : MonoBehaviour
 
         ScreenBounding();
         ApplyDrag();
+
+        _xDrag += xAndYDragIncrease;
+        _yDrag += xAndYDragIncrease;
 
         rb.velocity = velocity;
     }
@@ -104,14 +109,14 @@ public class PlayerMovement : MonoBehaviour
             /*m_EulerAngleVelocity = new Vector3(0, 0, 0);
             Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.fixedDeltaTime);
             rb.MoveRotation(m_Rigidbody.rotation * deltaRotation);*/
-            transform.Rotate(0, 0, 1);
+            transform.Rotate(0, 0, zRotation);
         }
 
         if(Input.GetKey("e")){
             /*m_EulerAngleVelocity = new Vector3(0, 0, 0);
             Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.fixedDeltaTime);
             rb.MoveRotation(m_Rigidbody.rotation * deltaRotation);*/
-            transform.Rotate(0, 0, -1);
+            transform.Rotate(0, 0, -zRotation);
         }
     }
 

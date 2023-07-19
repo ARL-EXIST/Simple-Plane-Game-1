@@ -9,8 +9,8 @@ public class Distance : MonoBehaviour
     public Transform player;
     public TextMeshProUGUI distanceText;
 
-    // Update is called once per frame
-    private void Update()
+    // FixedUpdate is called once per frame
+    private void FixedUpdate()
     {
         distanceText.text = player.position.z.ToString("0");
     }

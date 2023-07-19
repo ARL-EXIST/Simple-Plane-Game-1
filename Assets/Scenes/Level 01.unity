@@ -1034,11 +1034,27 @@ PrefabInstance:
       objectReference: {fileID: 963194227}
     - target: {fileID: 2597503844285910618, guid: 6f230567934317444b307454864112d0, type: 3}
       propertyPath: _xDrag
-      value: 6
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2597503844285910618, guid: 6f230567934317444b307454864112d0, type: 3}
       propertyPath: _yDrag
-      value: 6
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2597503844285910618, guid: 6f230567934317444b307454864112d0, type: 3}
+      propertyPath: zRotation
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2597503844285910618, guid: 6f230567934317444b307454864112d0, type: 3}
+      propertyPath: speedIncrease
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2597503844285910618, guid: 6f230567934317444b307454864112d0, type: 3}
+      propertyPath: xAndYMovement
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2597503844285910618, guid: 6f230567934317444b307454864112d0, type: 3}
+      propertyPath: xAndYDragIncrease
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2597503844285910620, guid: 6f230567934317444b307454864112d0, type: 3}
       propertyPath: m_Name
@@ -1273,6 +1289,26 @@ PrefabInstance:
     - target: {fileID: 7078892939483858570, guid: 677111bd77130104ab40b4316c130286, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078892939483858572, guid: 677111bd77130104ab40b4316c130286, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078892939483858572, guid: 677111bd77130104ab40b4316c130286, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078892939483858572, guid: 677111bd77130104ab40b4316c130286, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078892939483858572, guid: 677111bd77130104ab40b4316c130286, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078892939483858572, guid: 677111bd77130104ab40b4316c130286, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 7078892939483858574, guid: 677111bd77130104ab40b4316c130286, type: 3}
       propertyPath: m_Name
